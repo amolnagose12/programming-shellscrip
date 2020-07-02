@@ -1,0 +1,17 @@
+#! /bin/bash 
+
+
+read -p "enter the num : " num
+
+while [ $num != 1 ]
+do
+	for ((i=2;i<=$num;i++))
+	do
+		if [[ $(($num%$i)) -eq 0 ]]
+		then	
+			echo $i
+			num=$(($num/$i))
+			break
+		fi
+	done
+done
